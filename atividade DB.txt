@@ -1,0 +1,38 @@
+CREATE TABLE `TRABALHADORES`(
+`CODIGO` INT (11),
+`NOME` VARCHAR (70),
+`DATA_NASCIMENTO` DATE,
+`PROFISSAO_ATUAL` VARCHAR (70),
+PRIMARY KEY (`CODIGO`)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO TRABALHADORES (CODIGO, NOME, DATA_NASCIMENTO, PROFISSAO_ATUAL) VALUES
+(1, 'Geraldo Bernardo', '2007-04-11', 'Estudante'),
+(2, 'Leonardo Silva', '2003-02-10', 'Engenheiro'),
+(3, 'Juliana Skatista', '2001-09-01', 'Médica'),
+(4, 'Yasmin Lima', '1997-09-22', 'Secretaria'),
+(5, 'Thiago Medeiro', '1988-02-26', 'Cantor');
+DELIMITER $$
+CREATE PROCEDURE SELECIONADOR_DE_CLIENTE(IN quantidade INT)
+BEGIN
+    SELECT * FROM TRABALHADORES
+    LIMIT quantidade;
+END $$
+DELIMITER ;
+
+CALL SELECIONADOR_DE_CLIENTE(2);
+
+
+
+ATIVIDADE 3 THIAGO BAHIA.sql
+Exibindo ATIVIDADE 3 THIAGO BAHIA.sql…
+AULA - 03 QUERY
+Banco Dados
+•
+20 de ago.
+100 pontos
+Data de entrega: Ontem
+
+Query.pptx
+PowerPoint
+Comentários da turma
